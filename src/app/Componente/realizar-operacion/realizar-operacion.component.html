@@ -1,1 +1,57 @@
-<p>realizar-operacion works!</p>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <div class="text-center">
+        <h2>OPERACIONES</h2>
+      </div>
+      <div class="form-group">
+        <label for="numeroA"> NUMERO A: </label>
+        <input
+          type="number"
+          class="form-control"
+          id="numeroA"
+          [(ngModel)]="operacion.a"
+        />
+      </div>
+      <div class="form-group">
+        <label for="numeroB"> NUMERO B: </label>
+        <input
+          type="number"
+          class="form-control"
+          id="numeroB"
+          [(ngModel)]="operacion.b"
+        />
+      </div>
+      <div class="form-group">
+        <label for="tipoOperacion"> TIPO DE OPERACION: </label>
+        <select
+          id="tipoOperacion"
+          class="form-control"
+          [(ngModel)]="operacion.operacion"
+        >
+          <option value="suma">SUMA</option>
+          <option value="resta">RESTA</option>
+          <option value="division">DIVISION</option>
+          <option value="multiplicacion">MULTIPLICACION</option>
+        </select>
+      </div>
+
+			<br>
+			<div class="d-grid gap-2 col-6 mx-auto" >
+				<button class="btn btn-dark" (click)="resolverOperacion()"> RESOLVER </button>
+			</div>
+
+			<hr style="border: solid;">
+			<div class="form-group">
+				<label for="resultadoCifrado"> RESULTADO CIFRADO: </label>
+				<input type="text" class="form-control" id="resultadoCifrado" [(ngModel)]="operacion.resultadoCifrado" readonly>
+			</div>
+
+			<div class="form-group">
+				<label for="resultadoDescifrado"> RESULTADO DESCIFRADO </label>
+				<input type="text" class="form-control" id="resultadoDescifrado" [(ngModel)]="operacion.resultado" readonly>
+			</div>
+
+    </div>
+  </div>
+</div>
